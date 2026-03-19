@@ -1,4 +1,4 @@
-[![Project Diablo Lite Banner](https://github.com/ByRafaelSystem/Project-Diablo-Lite-magisk-ksu-apatch/raw/main/IMG_20260316_191515.jpg?raw=true)](https://github.com/ByRafaelSystem/Project-Diablo-Lite-magisk-ksu-apatch/blob/main/IMG_20260316_191515.jpg?raw=true)
+![Project Diablo Lite Banner](https://github.com/ByRafaelSystem/Project-Diablo-Lite-magisk-ksu-apatch/blob/main/project_diablo_lite_banner.svg?raw=true)
 
 # 😈 Project Diablo Lite
 
