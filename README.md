@@ -2,11 +2,11 @@
 
 # 😈 Project Diablo Lite
 
-### By\_Rafael System
+### By_Rafael System
 
 **Motor de rendimiento automático para Android — Automatic Performance Engine**
 
-[![Version](https://img.shields.io/badge/Version-v2.0.5-red?style=flat-square)](https://github.com/ByRafaelSystem/Project-Diablo-Lite-magisk-ksu-apatch/releases)
+[![Version](https://img.shields.io/badge/Version-v2.0-red?style=flat-square)](https://github.com/ByRafaelSystem/Project-Diablo-Lite-magisk-ksu-apatch/releases)
 [![Android](https://img.shields.io/badge/Android-9%2B-green?style=flat-square)](https://github.com/ByRafaelSystem/Project-Diablo-Lite-magisk-ksu-apatch)
 [![Root](https://img.shields.io/badge/Root-Magisk%20%7C%20KSU%20%7C%20APatch-blue?style=flat-square)](https://github.com/ByRafaelSystem/Project-Diablo-Lite-magisk-ksu-apatch)
 [![Chips](https://img.shields.io/badge/Chips-MTK%20%7C%20SD%20%7C%20Exynos%20%7C%20Tensor%20%7C%20m%C3%A1s-purple?style=flat-square)](https://github.com/ByRafaelSystem/Project-Diablo-Lite-magisk-ksu-apatch)
@@ -17,11 +17,11 @@
 
 ## 🌍 Idiomas / Languages
 
-* 🇪🇸 [Español](#español)
-* 🇺🇸 [English](#english)
-* 🇧🇷 [Português](#português)
-* 🇮🇩 [Indonesia](#indonesia)
-* 🇷🇺 [Русский](#русский)
+- 🇪🇸 [Español](#español)
+- 🇺🇸 [English](#english)
+- 🇧🇷 [Português](#português)
+- 🇮🇩 [Indonesia](#indonesia)
+- 🇷🇺 [Русский](#русский)
 
 ---
 
@@ -29,55 +29,58 @@
 
 ### ¿Qué es Project Diablo Lite?
 
-Project Diablo Lite es la versión automática del motor de rendimiento Project Diablo. Se instala una vez y trabaja solo: detecta tu chipset, aplica los tweaks correctos y cambia de modo automáticamente según lo que estés haciendo — sin que tengas que tocar nada.
+Project Diablo Lite es la versión automática del motor de rendimiento Project Diablo. Se instala una vez y trabaja solo: detecta tu chipset automáticamente, aplica los tweaks correctos y cambia de modo según lo que estés haciendo — sin que tengas que tocar nada.
 
 ### ✨ Características
 
-* 😈 **DiabloAI** — Motor automático que detecta gaming · balance · idle · carga
-* 🔥 **4 modos de rendimiento** — Performance · Balance · Battery · Gaming Pro
-* 🎮 **Detección de juegos** — 522 juegos incluidos, lista editable desde la WebUI
-* 👆 **Touch optimizado** — 240Hz, latencia mínima, PowerHAL boost
-* 🔍 **Detección automática de chipset** — MTK, Snapdragon, Exynos, Tensor, Unisoc, Kirin
-* 🌐 **Universal** — Funciona en cualquier dispositivo Android con root
-* 🎨 **WebUI** — Interfaz en 5 idiomas con modo manual y AI toggle
-* 🔔 **Notificaciones** — Toast al cambiar de modo
-* 🌐 **Diablo Boost** — Optimización de buffers TCP/UDP y desactivación de WiFi power save para gaming online
-* ⚡ **FastCharge** — Aumenta la corriente de carga (configurable desde la WebUI)
-* 🛡️ **Diablo Protect** — Protección anti-bootloop: desactiva el módulo automáticamente tras 3 fallos de boot consecutivos
-* 🖥️ **AmeRender** — Motor de render avanzado: optimiza SurfaceFlinger, shaders, GPU y cgroup de tareas
-* 📺 **Zeta** — Fija el refresh rate al máximo del panel en cada arranque
-* ⚙️ **QCOM Scheduler** — Tweaks avanzados de scheduler, input boost y schedtune para Snapdragon
-* 💾 **DVFSRC** — Control de ancho de banda de memoria DDR (solo MediaTek)
-* 🎯 **FPSGO** — Motor de control de FPS del kernel MediaTek integrado por modo
+- 😈 **DiabloAI v2** — Motor automático con bloqueo por app: detecta gaming · balance · idle · carga · temperatura
+- 🔥 **4 modos de rendimiento** — Performance · Balance · Battery · Gaming Pro
+- 🎮 **Detección de juegos** — 522 juegos incluidos, lista editable desde la app
+- 🔒 **Bloqueo por app** — Al detectar un juego lo bloquea en Gaming Pro hasta que se cierra
+- 🧠 **OOM Protect** — Protege el proceso del juego del sistema durante la partida
+- 🌡️ **CoolDown inteligente** — Solo actúa en Balance/Battery; Gaming Pro y Performance son libres
+- 👆 **Touch Engine** — 240Hz, latencia mínima, PowerHAL boost
+- 🌐 **Red gaming** — Buffers TCP optimizados, baja latencia WiFi, RPS en Gaming Pro
+- 💾 **VM Tweaks** — RAM optimizada por perfil (swappiness, cache pressure, page cluster)
+- 🔍 **Detección automática de chipset** — MTK · SD · Exynos · Tensor · Unisoc · Kirin
+- 🔧 **G85 / G99** — Soporte específico para Helio G85 y G99 (PPM + GED)
+- ⚡ **Diablo Boost** — Optimización de red para gaming online (TCP Fast Open, power save off)
+- 🔋 **FastCharge** — Carga rápida segura configurable
+- 🛡️ **Diablo Protect** — Anti-bootloop: desactiva el módulo tras 3 reinicios fallidos
+- 🎨 **App propia** — Se administra desde la app **Project Diablo Lite**, interfaz en 5 idiomas con toggle manual y control completo. No requiere KernelSU ni gestor externo para operar.
+- 🔔 **Notificaciones** — Alerta al sistema en cada cambio de modo
 
-### 🧠 Cómo funciona DiabloAI
+### 🧠 Cómo funciona DiabloAI v2
 
 | Situación detectada | Modo aplicado |
-| --- | --- |
-| Juego activo (en gamelist) | 😈 Gaming Pro |
+|---|---|
+| Juego activo (en gamelist) | 😈 Gaming Pro — bloqueado hasta cerrar |
+| Temperatura alta | 🔋 Battery CoolDown (solo en Balance/Battery) |
 | Pantalla apagada | 🔋 Battery |
-| Cargando sin juego | ⚖️ Balance |
-| 5 minutos sin actividad | 🔋 Battery |
-| Uso normal activo | ⚖️ Balance |
-| Juego cerrado | ⚖️ Balance |
+| Batería baja | 🔋 Battery |
+| Cargando sin juego | Modo por defecto |
+| Idle (configurable) | 🔋 Battery |
+| Uso normal activo | Modo por defecto |
+| Juego cerrado | Restaura el perfil previo al juego |
 
-> Si DiabloAI está desactivado desde la WebUI, el modo que elegiste se respeta y Diablo no cambia nada automáticamente.
+> Si DiabloAI está desactivado, el modo elegido se respeta completamente — Diablo no interviene.
+> Las Reglas AI se pueden desactivar por separado para que el AI solo detecte juegos.
 
 ### 😈 Modos disponibles
 
-| Modo | CPU | GPU | Ideal para |
-| --- | --- | --- | --- |
-| 🔥 Performance | Governor máximo | Frecuencia máxima | Rendimiento sostenido |
-| ⚖️ Balance | Governor inteligente | Frecuencia media | Uso diario |
-| 🔋 Battery | Ahorro agresivo | Frecuencia mínima | Máxima autonomía |
-| 😈 Gaming Pro | Máximo | Máximo + animaciones 0 | Juegos competitivos |
+| Modo | CPU | GPU | Red | VM | Ideal para |
+|---|---|---|---|---|---|
+| 🔥 Performance | Governor máximo | Frecuencia máxima | Normal | Fluido | Rendimiento sostenido |
+| ⚖️ Balance | schedutil libre | Ondemand | Normal | Neutro | Uso diario |
+| 🔋 Battery | powersave (3 niveles) | Mínima | Normal | Ahorro | Máxima autonomía |
+| 😈 Gaming Pro | Máximo | Máximo | Gaming | Gaming | Juegos competitivos |
 
 ### 🔧 Chipsets soportados
 
 | Chipset | Soporte | Detalles |
-| --- | --- | --- |
-| MediaTek (MTK) | ✅ Máximo | `sugov_ext` · `gpufreqv2` · `dvfsrc` · `FPSGO` · GED boost · Mali |
-| Snapdragon (QCOM) | ✅ Completo | `schedutil` · DCVS bus boost · KGSL GPU · input_boost · schedtune |
+|---|---|---|
+| MediaTek (MTK) | ✅ Máximo | `sugov_ext` · `gpufreqv2` · `dvfsrc` · `FPSGO` · G85/G99 |
+| Snapdragon (QCOM) | ✅ Completo | `performance` · DCVS · KGSL · Sched boost · Input boost |
 | Exynos (Samsung) | ✅ Completo | `performance` governor · GPU devfreq |
 | Google Tensor | ✅ Completo | Detección via sysfs |
 | Unisoc | ✅ Base | Tweaks genéricos CPU/GPU |
@@ -86,17 +89,19 @@ Project Diablo Lite es la versión automática del motor de rendimiento Project 
 ### 📱 Compatibilidad
 
 | Dispositivo | Compatibilidad | Notas |
-| --- | --- | --- |
+|---|---|---|
 | Xiaomi / Redmi / POCO | ✅ Máxima | Optimizado para HyperOS 2 |
 | Samsung | ✅ Parcial | Exynos soportado |
-| OnePlus / OPPO | ✅ Parcial | Tweaks genéricos + touch panel OPPO/OnePlus |
+| OnePlus / OPPO / Realme | ✅ Parcial | Tweaks genéricos |
 | Google Pixel | ✅ Parcial | Tensor soportado |
 | Otros Android 9+ | ✅ Base | Tweaks genéricos activos |
+
+> ⚠️ **ROMs custom**: Project Diablo está diseñado para ROMs stock y near-stock. En ROMs custom (AOSP, Paranoid, etc.) puede haber conflictos con los tweaks propios de la ROM. Si experimentás problemas de touch o input, desactivá el **Touch Engine** desde la app.
 
 ### ⚙️ Gestores de root compatibles
 
 | Gestor | Versión mínima | Estado |
-| --- | --- | --- |
+|---|---|---|
 | Magisk | v20.4+ | ✅ Soportado |
 | KernelSU | Cualquiera | ✅ Soportado |
 | APatch | Cualquiera | ✅ Soportado |
@@ -105,48 +110,29 @@ Project Diablo Lite es la versión automática del motor de rendimiento Project 
 
 1. Descargá el ZIP desde [Releases](https://github.com/ByRafaelSystem/Project-Diablo-Lite-magisk-ksu-apatch/releases)
 2. Abrí Magisk / KSU / APatch
-3. Instalá el ZIP
+3. Instalá el módulo desde el ZIP
 4. Reiniciá el dispositivo
-5. Abrí la **WebUI** — Diablo ya está trabajando automáticamente
-
-### 🆕 Novedades v2.0.5
-
-* **Diablo Boost** — Optimización completa de red (buffers TCP/UDP 4 MB, tcp_fastopen, low latency, WiFi power save off). Activable desde la WebUI sin reinicio.
-* **FastCharge** — Carga rápida configurable (por defecto 2000 mA). Detecta automáticamente los nodos USB y battery del dispositivo. Temperatura de corte configurable.
-* **Diablo Protect** — Sistema anti-bootloop. Detecta 3 arranques incompletos consecutivos y desactiva el módulo automáticamente. El contador se resetea cuando el boot completa exitosamente. Avisa al usuario con notificación.
-* **AmeRender (actualizado)** — Motor de render unificado en un solo script. Incluye: Diablo Render Engine (SurfaceFlinger adaptativo por VSYNC), Diablo Render FlowX (GPU MTK/Adreno/Mali/PowerVR + cgroup de tareas), y Diablo Render Plus / Facur (phase offsets dinámicos por FPS detectado). Corre una sola vez al boot en background.
-* **Zeta** — Nuevo script dedicado a fijar el refresh rate al máximo del panel. Usa `cmd display dump` para detectar el FPS real y lo aplica vía `settings` + `resetprop`.
-* **QCOM Scheduler (nuevo)** — Tres funciones dedicadas para Snapdragon: `qcom_sched_gaming` (latencia mínima, input_boost 200ms, schedtune.boost 5), `qcom_sched_balance` y `qcom_sched_save`. Se integran al flujo de `apply_mode`.
-* **DVFSRC mejorado** — Ahora `dvfsrc_balance` usa `kakangkuh` (sin bloquear el nodo) para permitir que el sistema retome el control del DDR en modo normal.
-* **FPSGO por modo** — Gaming Pro y Performance activan `fpsgo_gaming` (sin throttle térmico, boost libre). Balance y Battery llaman a `fpsgo_normal`.
-* **Detección de juegos reforzada** — Usa `dd + tr '\0' '\n'` para leer `/proc/PID/cmdline`, filtrado por `oom_score_adj < 900` y validación de formato de package con regex. Más robusto en kernels strict de Android.
-* **DiabloAI mejorado** — Detecta la transición AI OFF→ON y fuerza reevaluación completa. `PREV_AI_STATE` evita reevaluar en cada ciclo cuando el estado no cambió.
-* **Trigger FastCharge desde WebUI** — Nuevo archivo `fc_trigger` que el loop principal detecta y aplica o restaura la corriente de carga sin reinicio.
-* **Log de AI** — Diablo escribe un log de debug (`diablo.log.ai`) con screen/charging/game en cada ciclo para facilitar el diagnóstico.
-* **Gamelist** — 522 juegos incluidos por defecto.
+5. Abrí la **app Project Diablo Lite** — DiabloAI ya está activo automáticamente
 
 ### ❓ Preguntas frecuentes
 
 **¿Necesito configurar algo?**
-No. Al instalar detecta tu chipset y empieza a funcionar solo. Podés abrir la WebUI para ajustar o cambiar algo, pero no es necesario.
+No. Al instalar detecta tu chipset y empieza a funcionar solo con DiabloAI activo.
 
 **¿Qué pasa si quiero elegir el modo yo?**
-Desactivá DiabloAI desde el toggle en la WebUI. A partir de ahí aplicá el modo que quieras y Diablo lo respeta.
+Desactivá DiabloAI desde el toggle en la app. El modo que aplicás se respeta hasta que lo cambies.
 
-**¿Puedo agregar mis propios juegos a la lista?**
-Sí. Desde la WebUI → Lista de juegos podés buscar, agregar y eliminar paquetes.
+**¿Puedo agregar mis propios juegos?**
+Sí. Desde la app → Lista de juegos podés buscar, agregar y eliminar paquetes.
 
-**¿Es compatible con Project Diablo y ARG?**
-Son módulos separados del mismo autor. No instalar ambos Diablo al mismo tiempo.
+**¿Es compatible con Project Diablo Pro?**
+Son módulos separados del mismo autor. No instalar ambos al mismo tiempo.
 
 **¿Consume batería en segundo plano?**
-El loop de DiabloAI corre cada 4 segundos y es extremadamente liviano — lee archivos de `/proc` que ya están en memoria.
+El motor de detección es extremadamente liviano — lee `/proc` que ya está en memoria caché del kernel.
 
-**¿Qué pasa si el módulo causó un bootloop?**
-Diablo Protect lo detecta y desactiva el módulo automáticamente tras 3 fallos consecutivos. Al siguiente boot recibirás una notificación explicando qué pasó. Podés desinstalar el módulo desde tu gestor de root.
-
-**¿Diablo Boost puede afectar la estabilidad de la conexión?**
-No. Solo optimiza los buffers del kernel y desactiva el power save del WiFi. No modifica rutas ni DNS. Si notás algo raro, desactivalo desde la WebUI.
+**¿Por qué no funciona bien en mi ROM custom?**
+Las ROMs custom tienen sus propios tweaks de kernel e input que pueden competir con los de Diablo. Desactivá el Touch Engine desde la app para resolver conflictos de touch/aim.
 
 ---
 
@@ -154,55 +140,58 @@ No. Solo optimiza los buffers del kernel y desactiva el power save del WiFi. No 
 
 ### What is Project Diablo Lite?
 
-Project Diablo Lite is the automatic version of the Project Diablo performance engine. Install once and it works on its own: detects your chipset, applies the right tweaks, and switches modes automatically based on what you're doing.
+Project Diablo Lite is the automatic version of the Project Diablo performance engine. Install once and it works on its own: auto-detects your chipset, applies the right tweaks, and switches modes based on what you're doing.
 
 ### ✨ Features
 
-* 😈 **DiabloAI** — Auto engine detecting gaming · balance · idle · charging
-* 🔥 **4 performance modes** — Performance · Balance · Battery · Gaming Pro
-* 🎮 **Game detection** — 522 games included, editable list from WebUI
-* 👆 **Optimized touch** — 240Hz, minimal latency, PowerHAL boost
-* 🔍 **Auto chipset detection** — MTK, Snapdragon, Exynos, Tensor, Unisoc, Kirin
-* 🌐 **Universal** — Works on any rooted Android device
-* 🎨 **WebUI** — Interface in 5 languages with manual mode and AI toggle
-* 🔔 **Notifications** — Toast on mode change
-* 🌐 **Diablo Boost** — TCP/UDP buffer optimization and WiFi power save off for online gaming
-* ⚡ **FastCharge** — Configurable charging current boost (WebUI)
-* 🛡️ **Diablo Protect** — Anti-bootloop: auto-disables the module after 3 consecutive failed boots
-* 🖥️ **AmeRender** — Advanced render engine: SurfaceFlinger, shaders, GPU and task cgroup
-* 📺 **Zeta** — Locks refresh rate to the panel's maximum on every boot
-* ⚙️ **QCOM Scheduler** — Advanced scheduler, input boost and schedtune tweaks for Snapdragon
-* 💾 **DVFSRC** — DDR memory bandwidth control (MediaTek only)
-* 🎯 **FPSGO** — MediaTek kernel FPS engine integrated per mode
+- 😈 **DiabloAI v2** — Auto engine with per-app lock: detects gaming · balance · idle · charging · temperature
+- 🔥 **4 performance modes** — Performance · Balance · Battery · Gaming Pro
+- 🎮 **Game detection** — 522 games included, editable list from the app
+- 🔒 **App lock** — Locks Gaming Pro while a game is active, restores your previous profile when it closes
+- 🧠 **OOM Protect** — Shields game process from being killed by Android during play
+- 🌡️ **Smart CoolDown** — Only acts in Balance/Battery; Gaming Pro and Performance run free
+- 👆 **Touch Engine** — 240Hz, minimal latency, PowerHAL boost
+- 🌐 **Net Gaming** — TCP buffers, low-latency WiFi, RPS in Gaming Pro
+- 💾 **VM Tweaks** — RAM tuned per profile (swappiness, cache pressure, page cluster)
+- 🔍 **Auto chipset detection** — MTK · SD · Exynos · Tensor · Unisoc · Kirin
+- 🔧 **G85 / G99** — Specific support for Helio G85 and G99 (PPM + GED)
+- ⚡ **Diablo Boost** — Network optimization for online gaming
+- 🔋 **FastCharge** — Safe configurable fast charging
+- 🛡️ **Diablo Protect** — Anti-bootloop: disables module after 3 failed boots
+- 🎨 **Dedicated app** — Managed from the **Project Diablo Lite app**, interface in 5 languages with manual mode and full control. No KernelSU or external manager needed to operate.
+- 🔔 **Notifications** — System alert on every mode change
 
-### 🧠 How DiabloAI works
+### 🧠 How DiabloAI v2 works
 
 | Detected situation | Applied mode |
-| --- | --- |
-| Active game (in gamelist) | 😈 Gaming Pro |
+|---|---|
+| Active game (in gamelist) | 😈 Gaming Pro — locked until closed |
+| High temperature | 🔋 Battery CoolDown (Balance/Battery only) |
 | Screen off | 🔋 Battery |
-| Charging without game | ⚖️ Balance |
-| 5 minutes idle | 🔋 Battery |
-| Normal active use | ⚖️ Balance |
-| Game closed | ⚖️ Balance |
+| Low battery | 🔋 Battery |
+| Charging without game | Default mode |
+| Idle (configurable) | 🔋 Battery |
+| Normal active use | Default mode |
+| Game closed | Restores profile from before the game |
 
-> If DiabloAI is turned off from the WebUI, your manually selected mode is respected and Diablo won't change anything automatically.
+> If DiabloAI is turned off, your manually selected mode is fully respected.
+> AI Rules can be disabled separately so the AI only handles game detection.
 
 ### 😈 Available modes
 
-| Mode | CPU | GPU | Best for |
-| --- | --- | --- | --- |
-| 🔥 Performance | Max governor | Max frequency | Sustained performance |
-| ⚖️ Balance | Smart governor | Mid frequency | Daily use |
-| 🔋 Battery | Aggressive saving | Min frequency | Maximum battery life |
-| 😈 Gaming Pro | Maximum | Maximum + 0ms animations | Competitive gaming |
+| Mode | CPU | GPU | Network | VM | Best for |
+|---|---|---|---|---|---|
+| 🔥 Performance | Max governor | Max frequency | Normal | Smooth | Sustained performance |
+| ⚖️ Balance | Free schedutil | Ondemand | Normal | Neutral | Daily use |
+| 🔋 Battery | powersave (3 levels) | Minimum | Normal | Save | Maximum battery life |
+| 😈 Gaming Pro | Maximum | Maximum | Gaming | Gaming | Competitive gaming |
 
 ### 🔧 Supported chipsets
 
 | Chipset | Support | Details |
-| --- | --- | --- |
-| MediaTek (MTK) | ✅ Maximum | `sugov_ext` · `gpufreqv2` · `dvfsrc` · `FPSGO` · GED boost · Mali |
-| Snapdragon (QCOM) | ✅ Full | `schedutil` · DCVS bus boost · KGSL GPU · input_boost · schedtune |
+|---|---|---|
+| MediaTek (MTK) | ✅ Maximum | `sugov_ext` · `gpufreqv2` · `dvfsrc` · `FPSGO` · G85/G99 |
+| Snapdragon (QCOM) | ✅ Full | `performance` · DCVS · KGSL · Sched boost · Input boost |
 | Exynos (Samsung) | ✅ Full | `performance` governor · GPU devfreq |
 | Google Tensor | ✅ Full | Detection via sysfs |
 | Unisoc | ✅ Base | Generic CPU/GPU tweaks |
@@ -211,17 +200,19 @@ Project Diablo Lite is the automatic version of the Project Diablo performance e
 ### 📱 Device compatibility
 
 | Device | Compatibility | Notes |
-| --- | --- | --- |
+|---|---|---|
 | Xiaomi / Redmi / POCO | ✅ Maximum | Optimized for HyperOS 2 |
 | Samsung | ✅ Partial | Exynos supported |
-| OnePlus / OPPO | ✅ Partial | Generic tweaks + OPPO/OnePlus touch panel |
+| OnePlus / OPPO / Realme | ✅ Partial | Generic tweaks |
 | Google Pixel | ✅ Partial | Tensor supported |
 | Other Android 9+ | ✅ Base | Generic tweaks active |
+
+> ⚠️ **Custom ROMs**: Project Diablo is designed for stock and near-stock ROMs. On custom ROMs (AOSP, Paranoid, etc.) there may be conflicts with the ROM's own tweaks. If you experience touch or aim issues, disable the **Touch Engine** in the app.
 
 ### ⚙️ Supported root managers
 
 | Manager | Min version | Status |
-| --- | --- | --- |
+|---|---|---|
 | Magisk | v20.4+ | ✅ Supported |
 | KernelSU | Any | ✅ Supported |
 | APatch | Any | ✅ Supported |
@@ -230,42 +221,26 @@ Project Diablo Lite is the automatic version of the Project Diablo performance e
 
 1. Download the ZIP from [Releases](https://github.com/ByRafaelSystem/Project-Diablo-Lite-magisk-ksu-apatch/releases)
 2. Open Magisk / KSU / APatch
-3. Install the ZIP
+3. Install the module from the ZIP
 4. Reboot your device
-5. Open the **WebUI** — Diablo is already working automatically
-
-### 🆕 What's new in v2.0.5
-
-* **Diablo Boost** — Network optimization (4 MB TCP/UDP buffers, tcp_fastopen, low latency, WiFi power save off). Toggle from WebUI without reboot.
-* **FastCharge** — Configurable fast charging (default 2000 mA). Auto-detects USB and battery nodes. Cut-off temperature configurable.
-* **Diablo Protect** — Anti-bootloop system. Detects 3 consecutive incomplete boots and auto-disables the module. Counter resets on successful boot. Notifies the user.
-* **AmeRender (updated)** — Unified render engine: Diablo Render Engine (adaptive SurfaceFlinger by VSYNC), Diablo Render FlowX (GPU MTK/Adreno/Mali/PowerVR + task cgroup), Diablo Render Plus / Facur (dynamic phase offsets by detected FPS). Runs once at boot in background.
-* **Zeta** — New script dedicated to locking refresh rate to the panel maximum. Detects real FPS via `cmd display dump`.
-* **QCOM Scheduler (new)** — Dedicated functions for Snapdragon: gaming (minimum latency, input_boost 200ms, schedtune.boost 5), balance and save. Integrated into `apply_mode`.
-* **Improved DVFSRC** — `dvfsrc_balance` now uses `kakangkuh` (no lock) to let the system regain DDR control in normal mode.
-* **FPSGO per mode** — Gaming Pro and Performance enable `fpsgo_gaming` (no thermal throttle, free boost). Balance and Battery call `fpsgo_normal`.
-* **Reinforced game detection** — Uses `dd + tr '\0' '\n'` to read `/proc/PID/cmdline`, filtered by `oom_score_adj < 900` and package format regex. More robust on strict Android kernels.
-* **Improved DiabloAI** — Detects AI OFF→ON transition and forces full re-evaluation. `PREV_AI_STATE` avoids redundant checks each cycle.
-* **FastCharge trigger from WebUI** — New `fc_trigger` file detected by the main loop, applies or restores charging current without reboot.
-* **AI log** — Diablo writes a debug log (`diablo.log.ai`) with screen/charging/game on each cycle.
-* **Gamelist** — 522 games included by default.
+5. Open the **Project Diablo Lite app** — DiabloAI is already running automatically
 
 ### ❓ FAQ
 
 **Do I need to configure anything?**
-No. On install it detects your chipset and starts working on its own. You can open the WebUI to adjust things, but it's not required.
+No. On install it detects your chipset and starts working automatically with DiabloAI active.
 
 **What if I want to choose the mode myself?**
-Turn off DiabloAI from the toggle in the WebUI. From then on apply the mode you want and Diablo will respect it.
+Turn off DiabloAI from the toggle in the app. Your selected mode is respected until you change it.
 
 **Can I add my own games to the list?**
-Yes. From WebUI → Game list you can search, add and remove packages.
+Yes. From the app → Game list you can search, add and remove packages.
 
-**What if the module caused a bootloop?**
-Diablo Protect detects it and auto-disables the module after 3 consecutive failures. On the next boot you'll receive a notification. You can uninstall from your root manager.
+**Is it compatible with Project Diablo Pro?**
+They are separate modules by the same author. Do not install both at the same time.
 
-**Does Diablo Boost affect connection stability?**
-No. It only optimizes kernel buffers and disables WiFi power save. Routes and DNS are untouched. If you notice anything odd, disable it from the WebUI.
+**Why doesn't it work well on my custom ROM?**
+Custom ROMs have their own kernel and input tweaks that can conflict with Diablo's. Disable the Touch Engine in the app to resolve touch/aim conflicts.
 
 ---
 
@@ -273,27 +248,27 @@ No. It only optimizes kernel buffers and disables WiFi power save. Routes and DN
 
 ### O que é Project Diablo Lite?
 
-Project Diablo Lite é a versão automática do motor de desempenho Project Diablo. Instale uma vez e ele trabalha sozinho: detecta seu chipset, aplica os tweaks corretos e troca de modo automaticamente.
+Project Diablo Lite é a versão automática do motor de desempenho Project Diablo. Instale uma vez e ele trabalha sozinho: detecta seu chipset automaticamente, aplica os tweaks corretos e troca de modo com base no que você está fazendo.
+
+### ✨ Recursos
+
+- 😈 **DiabloAI v2** — Motor automático com bloqueio por app
+- 🔥 **4 modos** — Performance · Balance · Battery · Gaming Pro
+- 🎮 **Detecção de jogos** — 522 jogos incluídos, lista editável pelo app
+- 🔒 **Bloqueio por app** — Gaming Pro ativo enquanto o jogo roda
+- 🌡️ **CoolDown inteligente** — Só atua em Balance/Battery
+- 💾 **VM Tweaks** — RAM otimizada por perfil
+- 🌐 **Net Gaming** — Rede otimizada no Gaming Pro
+- 🛡️ **Diablo Protect** — Anti-bootloop integrado
 
 ### 😈 Modos disponíveis
 
 | Modo | Ideal para |
-| --- | --- |
+|---|---|
 | 🔥 Performance | Desempenho sustentado |
 | ⚖️ Balance | Uso diário |
 | 🔋 Battery | Máxima autonomia |
 | 😈 Gaming Pro | Jogos competitivos |
-
-### 🆕 Novidades v2.0.5
-
-* **Diablo Boost** — Otimização de rede TCP/UDP e WiFi power save off para gaming online
-* **FastCharge** — Corrente de carregamento configurável via WebUI
-* **Diablo Protect** — Proteção anti-bootloop: desativa o módulo após 3 falhas consecutivas
-* **AmeRender atualizado** — Motor de render unificado (SurfaceFlinger, GPU, cgroup)
-* **Zeta** — Trava o refresh rate no máximo do painel
-* **QCOM Scheduler** — Tweaks avançados para Snapdragon (input_boost, schedtune)
-* **Detecção de jogos reforçada** — Leitura robusta de `/proc/PID/cmdline`
-* **522 jogos** na gamelist padrão
 
 ### 🔧 Chipsets suportados
 
@@ -305,7 +280,7 @@ MTK · Snapdragon · Exynos · Tensor · Unisoc · Kirin
 2. Abra o Magisk / KSU / APatch
 3. Instale pelo ZIP
 4. Reinicie
-5. Abra o **WebUI** — Diablo já está funcionando automaticamente
+5. Abra o **app Project Diablo Lite** — DiabloAI já está funcionando
 
 ---
 
@@ -313,27 +288,27 @@ MTK · Snapdragon · Exynos · Tensor · Unisoc · Kirin
 
 ### Apa itu Project Diablo Lite?
 
-Project Diablo Lite adalah versi otomatis dari mesin performa Project Diablo. Instal sekali dan bekerja sendiri: mendeteksi chipset, menerapkan tweak yang tepat, dan berganti mode secara otomatis.
+Project Diablo Lite adalah versi otomatis dari mesin performa Project Diablo. Instal sekali dan bekerja sendiri: mendeteksi chipset secara otomatis, menerapkan tweak yang tepat, dan berganti mode berdasarkan aktivitas Anda.
+
+### ✨ Fitur
+
+- 😈 **DiabloAI v2** — Mesin otomatis dengan kunci per-app
+- 🔥 **4 mode** — Performance · Balance · Battery · Gaming Pro
+- 🎮 **Deteksi game** — 522 game, daftar bisa diedit
+- 🔒 **Kunci app** — Gaming Pro aktif selama game berjalan
+- 🌡️ **CoolDown cerdas** — Hanya aktif di Balance/Battery
+- 💾 **VM Tweaks** — RAM dioptimalkan per profil
+- 🌐 **Net Gaming** — Jaringan dioptimalkan di Gaming Pro
+- 🛡️ **Diablo Protect** — Anti-bootloop terintegrasi
 
 ### 😈 Mode tersedia
 
 | Mode | Terbaik untuk |
-| --- | --- |
+|---|---|
 | 🔥 Performance | Performa berkelanjutan |
 | ⚖️ Balance | Penggunaan harian |
 | 🔋 Battery | Baterai maksimal |
 | 😈 Gaming Pro | Game kompetitif |
-
-### 🆕 Yang baru di v2.0.5
-
-* **Diablo Boost** — Optimasi buffer TCP/UDP dan WiFi power save off untuk gaming online
-* **FastCharge** — Arus pengisian yang dapat dikonfigurasi melalui WebUI
-* **Diablo Protect** — Anti-bootloop: menonaktifkan modul setelah 3 kegagalan boot berturut-turut
-* **AmeRender diperbarui** — Mesin render terpadu (SurfaceFlinger, GPU, cgroup)
-* **Zeta** — Mengunci refresh rate ke maksimum panel
-* **QCOM Scheduler** — Tweak lanjutan untuk Snapdragon (input_boost, schedtune)
-* **Deteksi game diperkuat** — Pembacaan `/proc/PID/cmdline` yang lebih robust
-* **522 game** dalam daftar default
 
 ### 🔧 Chipset didukung
 
@@ -345,7 +320,7 @@ MTK · Snapdragon · Exynos · Tensor · Unisoc · Kirin
 2. Buka Magisk / KSU / APatch
 3. Pasang dari ZIP
 4. Reboot
-5. Buka **WebUI** — Diablo sudah bekerja otomatis
+5. Buka **app Project Diablo Lite** — DiabloAI sudah aktif otomatis
 
 ---
 
@@ -353,27 +328,27 @@ MTK · Snapdragon · Exynos · Tensor · Unisoc · Kirin
 
 ### Что такое Project Diablo Lite?
 
-Project Diablo Lite — автоматическая версия движка производительности Project Diablo. Установите один раз и он работает сам: определяет чипсет, применяет нужные твики и автоматически переключает режимы.
+Project Diablo Lite — автоматическая версия движка производительности Project Diablo. Установите один раз: автоматически определяет чипсет, применяет нужные твики и переключает режимы в зависимости от того, что вы делаете.
+
+### ✨ Возможности
+
+- 😈 **DiabloAI v2** — Автоматический движок с блокировкой по приложению
+- 🔥 **4 режима** — Performance · Balance · Battery · Gaming Pro
+- 🎮 **Определение игр** — 522 игры, список редактируется
+- 🔒 **Блокировка по app** — Gaming Pro активен пока игра запущена
+- 🌡️ **Умный CoolDown** — Только в Balance/Battery
+- 💾 **VM Tweaks** — RAM оптимизирована под каждый профиль
+- 🌐 **Net Gaming** — Сеть оптимизирована в Gaming Pro
+- 🛡️ **Diablo Protect** — Защита от bootloop
 
 ### 😈 Доступные режимы
 
 | Режим | Лучше всего для |
-| --- | --- |
+|---|---|
 | 🔥 Performance | Стабильная производительность |
 | ⚖️ Balance | Ежедневное использование |
 | 🔋 Battery | Максимальный заряд |
 | 😈 Gaming Pro | Соревновательные игры |
-
-### 🆕 Что нового в v2.0.5
-
-* **Diablo Boost** — Оптимизация буферов TCP/UDP и отключение WiFi power save для онлайн-игр
-* **FastCharge** — Настраиваемый ток зарядки через WebUI
-* **Diablo Protect** — Защита от bootloop: отключает модуль после 3 неудачных загрузок подряд
-* **AmeRender обновлён** — Единый движок рендеринга (SurfaceFlinger, GPU, cgroup)
-* **Zeta** — Фиксирует частоту обновления на максимуме экрана
-* **QCOM Scheduler** — Расширенные твики для Snapdragon (input_boost, schedtune)
-* **Улучшенное обнаружение игр** — Более надёжное чтение `/proc/PID/cmdline`
-* **522 игры** в списке по умолчанию
 
 ### 🔧 Поддерживаемые чипсеты
 
@@ -385,17 +360,17 @@ MTK · Snapdragon · Exynos · Tensor · Unisoc · Kirin
 2. Откройте Magisk / KSU / APatch
 3. Установите из ZIP
 4. Перезагрузите
-5. Откройте **WebUI** — Diablo уже работает автоматически
+5. Откройте **app Project Diablo Lite** — DiabloAI уже работает автоматически
 
 ---
 
 ## 📄 Licencia / License
 
-Apache License 2.0 — By\_Rafael System © 2026
+Apache License 2.0 — By_Rafael System © 2026
 
 ---
 
 ## 🔗 Links
 
-* 📣 Telegram: [t.me/proyect\_diablo](https://t.me/proyect_diablo)
-* 🐙 GitHub: [github.com/ByRafaelSystem](https://github.com/ByRafaelSystem)
+- 📣 Telegram: [t.me/proyect_diablo](https://t.me/proyect_diablo)
+- 🐙 GitHub: [github.com/ByRafaelSystem](https://github.com/ByRafaelSystem)
